@@ -6,11 +6,15 @@ const btnResize = document.getElementById("btnResize");
 const btnColor = document.getElementById("btnColor");
 let randomColor = false;
 
+let size = window.prompt('Pick a Size (1 - 64)', '16');
 
-let size = window.prompt('Pick a Size', '16');
+while (isNaN(size) || size > 64 || size < 1){
+
+ size = window.prompt('Pick a Size (1 - 64)', '16');
+
+}
+
 createGrid(size);
-
-
 
 btnResize.addEventListener('click', () => {
     resizeBoard();
@@ -65,6 +69,10 @@ function createGrid(size){
 function resizeBoard(){
     size = window.prompt('Pick a Size', '16');              //asks for new size
  
+    while (isNaN(size) || size > 64 || size < 1){
+        size = window.prompt('Pick a Size (1 - 64)', '16');
+    }
+
     while (drawingBoard.firstChild) {                           //clears board
         drawingBoard.removeChild(drawingBoard.firstChild);
     }
