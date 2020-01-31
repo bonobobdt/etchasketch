@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(180, 190, 220);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#drawingBoard{
+    border-style: solid;
+    margin: 0 auto;
+    width: 35vw;
+    height: 35vw;
+    background-color: rgb(138, 146, 168, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ctrlDiv{
+    margin: 2vw;
+}
+
+.btn{
+    background: rgb(117, 144, 225);
+    border-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    box-shadow: 3px 3px rgb(48, 59, 92);
+}
+
+.btn:hover{
+    background-color:rgb(117, 144, 225, 0.5);
+}
+
+.btn:active{
+    transform: translateX(3px) translateY(3px);
+    box-shadow: none;
+}
